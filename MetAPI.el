@@ -21,7 +21,7 @@
 ;;; Commentary:
 
 ;;; A small package to fetch and display random art pieces from
-;;; The Metropoliton Museum of Art Collection API.
+;;; The Metropolitan Museum of Art Collection API.
 ;;;
 ;;; To use, run M-x met-run
 ;;; To customize output, (setq met-FIELD) defined on

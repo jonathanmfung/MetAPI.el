@@ -173,7 +173,7 @@ To remove all met-FIELD that are t."
       (read-only-mode)
       (org-mode)
       (font-lock-mode -1)
-      (spell-fu-mode -1)
+      ;; (spell-fu-mode -1)
       (erase-buffer)
       (newline 3)
       (insert (propertize (assoc-default 'title filter-obj) 'face `(:foreground ,(modus-themes-color 'blue) :height 200)))

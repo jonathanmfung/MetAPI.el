@@ -3,7 +3,7 @@
 ;; Copyright (C) 2021  Jonathan Fung
 
 ;; Author: Jonathan Fung <jonathanfung2000@gmail.com>
-;; Version: 0.1
+;; Version: 0.2
 ;; Package-Requires: ((emacs "28")(dash "2.19.0"))
 ;; Keywords: art, API
 ;; URL: https://github.com/jonathanmfung/MetAPI.el

@@ -4,6 +4,7 @@
 
 ;; Author: Jonathan Fung <jonathanfung2000@gmail.com>
 ;; Version 0.1
+;; Package-Requires: ((dash "2.19.0"))
 ;; Keywords: art, API
 ;; URL: https://github.com/jonathanmfung/MetAPI.el
 
@@ -32,6 +33,7 @@
 ;;; Code:
 
 (require 'url)
+(require 'dash)
 
 (defconst met-BASE_URL "https://collectionapi.metmuseum.org")
 (defconst met-OBJECTS_URL "/public/collection/v1/objects")

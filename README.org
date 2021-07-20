@@ -1,6 +1,7 @@
 #+TITLE: MetAPI
 * Screenshots
-[[file:img/ss_210719.png][Screenshot of 0.1, 210719]]
+#+ATTR_HTML: :style margin-left: auto; margin-right: auto;
+[[./img/ss_210719.png][Screenshot of 0.1, 210719]]
 * Contents :toc:
 - [[#screenshots][Screenshots]]
 - [[#installation][Installation]]

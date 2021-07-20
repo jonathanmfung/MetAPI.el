@@ -1,6 +1,6 @@
 #+TITLE: MetAPI
 * Screenshots
-[[file:img/ss_210719.png][Screenshot of 0.1, 210719 ]]
+[[file:img/ss_210719.png][Screenshot of 0.1, 210719]]
 * Contents :toc:
 - [[#screenshots][Screenshots]]
 - [[#installation][Installation]]
@@ -56,7 +56,7 @@ At this time, we do not require API users to register or obtain an API key to us
   + this is "solved" =met-run= by querying until a valid ID is produced, but is costly in terms of rate limits.
 - =met-generate= function is extremely messy
 - Non Ascii (?) characters are not printed correctly
-  + May frequently see \200 etc.
+  + May frequently see \200\200\223 etc.
   + I believe this may be due to =url= or how =json-read-object= processes this text.
   + This issue is not seen using CLI curl
 - =met-objectID= must be set to =t= for everything else to display properly

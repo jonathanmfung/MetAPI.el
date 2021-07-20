@@ -3,7 +3,9 @@
 ;; Copyright (C) 2021  Jonathan Fung
 
 ;; Author: Jonathan Fung <jonathanfung2000@gmail.com>
+;; Version 0.1
 ;; Keywords: art, API
+;; URL: https://github.com/jonathanmfung/MetAPI.el
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -189,6 +191,7 @@ To remove all met-FIELD that are t."
       (org-display-inline-images))
     (switch-to-buffer-other-window buf)))
 
+;;;###autoload
 (defun met-run ()
   "Run met program.
 The Metropolitan Museum of Art Collection API.

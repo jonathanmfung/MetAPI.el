@@ -1,0 +1,67 @@
+#+TITLE: MetAPI
+* Screenshots
+* Contents :toc:
+- [[#screenshots][Screenshots]]
+- [[#installation][Installation]]
+  - [[#required-packages][Required Packages]]
+- [[#overview][Overview]]
+  - [[#motivation][Motivation]]
+  - [[#decisions][Decisions]]
+- [[#usage][Usage]]
+  - [[#customization][Customization]]
+- [[#disclaimerswarning][Disclaimers/Warning]]
+- [[#road-map][Road Map]]
+  - [[#pretty-format-groups-of-fields][Pretty Format Groups of Fields]]
+  - [[#clean-up-functions-to-be-consistent-with-dashel][Clean up Functions to be Consistent with dash.el]]
+- [[#known-issues][Known Issues]]
+- [[#change-log][Change Log]]
+  - [[#01][0.1]]
+
+* Installation
+Not hosted on any ELPA or MELPA, and not planning to due to low code quality
+** Required Packages
+=url=, =modus-themes=, =cl=, =dash=
+=modus-themes= is built-in in emacs 28.
+
+* Overview
+** Motivation
+A small package to fetch and display random art pieces from The Metropolitan Museum of Art Collection API.
+
+A personal project to work with a REST API and emacs lisp.
+** Decisions
+Only deals with *Objects* and *Object* Endpoints. I did not consider *Departments* and *Search* integral to casually viewing art pieces.
+* Usage
+Run with =met-run=. Opens another window in Org mode with a random art object's information. Being Org mode, links should be navigable and images, if present, should be shown.
+** Customization
+Display which field you want to be displayed by =(setq met-FIELD t)=, and vice versa.
+
+Objects frequently do not have certain fields, so those cannot be shown.
+* Disclaimers/Warning
+From official Met API website (as of July 19, 2021):
+
+#+begin_quote
+At this time, we do not require API users to register or obtain an API key to use the service. Please limit request rate to 80 requests per second."
+#+end_quote
+
+* Road Map
+** TODO Pretty Format Groups of Fields
+- Can do retroactively by regex-ing for ^artist, etc.
+*** TODO Define Faces for Title and Groups
+** TODO Clean up Functions to be Consistent with dash.el
+- Currently using a mix of cl and native elisp
+* Known Issues
+- Evaluation of whole file takes a bit due to defining =met-ALL-OBJECTS=, the IDs of all 450000+ objects.
+- =met-random-object-id= sometimes fails to get a valid ID, due to some being omitted in repository.
+  + this is "solved" =met-run= by querying until a valid ID is produced, but is costly in terms of rate limits.
+- =met-generate= function is extremely messy
+- Non Ascii (?) characters are not printed correctly
+  + May frequently see \200 etc.
+  + I believe this may be due to =url= or how =json-read-object= processes this text.
+  + This issue is not seen using CLI curl
+- =met-objectID= must be set to =t= for everything else to display properly
+  + May be due being first in list, or some other obscure reason
+* Change Log
+** 0.1
+Initial package, alpha version
+
+Only exposed function is =met-run=.

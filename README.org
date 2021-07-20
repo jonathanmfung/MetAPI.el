@@ -1,8 +1,5 @@
 #+TITLE: MetAPI
 * Screenshots
-#+ATTR_HTML: :style margin-left: auto; margin-right: auto;
-[[./img/ss_210719.png][Screenshot of 0.1, 210719]]
-
 #+HTML: <p align="center"><img src="img/ss_210719.png" /></p>
 * Contents :toc:
 - [[#screenshots][Screenshots]]

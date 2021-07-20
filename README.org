@@ -21,7 +21,8 @@
 * Installation
 Not hosted on any ELPA or MELPA, and not planning to due to low code quality
 ** Required Packages
-=url=, =modus-themes=, =cl=, =dash=
+=url=, =modus-themes=, =cl=, =dash=.
+
 =modus-themes= is built-in in emacs 28.
 
 * Overview
